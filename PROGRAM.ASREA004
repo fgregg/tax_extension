@@ -1,0 +1,74 @@
+ *          DATA SET ASREA004E  AT LEVEL 015 AS OF 07/27/05
+ MACRO                                                                              00001
+ FILE FILEA                                                                         00002
+ PROPA 4 8 P                                                                        00003
+ TOWNA 14 1 U                                                                       00004
+ PRIASVALA 67 5 P                                                                   00005
+ CURRTOTLA 82 5 P                                                                   00006
+ PROPTOTLA 97 5 P                                                                   00007
+ SALESCTR 119 1 N                                                                   00008
+ DTLQSTCTR 120 3 N 0                                                                00009
+ TYPE 125 1 A  INDEX SUB1                                                           00010
+ DCLS 130 2 P  INDEX SUB1                                                           00011
+ PCASSD 151 4 P  INDEX SUB1                                                         00012
+ KEYPCLA 164 8 P INDEX SUB1                                                         00013
+                                                                                    00014
+ FILE FILEB                                                                         00015
+ PROPB 1 14 N                                                                       00016
+ KEYPCLB 15 14 N                                                                    00017
+ STATB 29 1 A                                                                       00018
+ PRIASVALB 30 9 N 0                                                                 00019
+ CURASVALB 39 9 N 0                                                                 00020
+ TOTPRIASVALB 48 9 N 0                                                              00021
+ TOTCURASVALB 57 9 N 0                                                              00022
+ WCLSMAMI W 3 N 0                                                                   00023
+ WMA WCLSMAMI 1 N 0                                                                 00024
+ WMI WCLSMAMI +1 2 N 0                                                              00025
+ CTR W 3 N 0                                                                        00026
+                                                                                    00027
+ JOB INPUT FILEA                                                                    00028
+ CTR = 0                                                                            00029
+ IF SALESCTR = 1                                                                    00030
+     SUB1 = 34                                                                      00031
+ ELSE                                                                               00032
+     SUB1 = 0                                                                       00033
+ END-IF                                                                             00034
+ PROPB = PROPA                                                                      00035
+ STATB = '0'                                                                        00036
+ MOVE ZEROES TO TOTPRIASVALB  TOTCURASVALB                                          00037
+ DO WHILE CTR LT DTLQSTCTR                                                          00038
+     IF TYPE NE '1'                                                                 00039
+         WCLSMAMI = DCLS                                                            00040
+         IF WMA EQ 2 +                                                              00041
+           AND WMI NE 25 40 41 88 90 99 +                                           00042
+            AND KEYPCLA GT 0 +                                                      00043
+             AND PCASSD GT 0                                                        00044
+               KEYPCLB = KEYPCLA                                                    00045
+               CURASVALB = PROPTOTLA                                                00046
+               IF TOWNA = 70 THRU 77                                                00047
+                  IF PRIASVALA GT 0                                                 00048
+                     PRIASVALB = PRIASVALA                                          00049
+                  ELSE                                                              00050
+                     IF CURRTOTLA GT 0                                              00051
+                        PRIASVALB = CURRTOTLA                                       00052
+                     ELSE                                                           00053
+                        PRIASVALB = PROPTOTLA                                       00054
+                     END-IF                                                         00055
+                  END-IF                                                            00056
+               ELSE                                                                 00057
+                  IF CURRTOTLA GT 0                                                 00058
+                     PRIASVALB = CURRTOTLA                                          00059
+                  ELSE                                                              00060
+                     PRIASVALB = PROPTOTLA                                          00061
+                  END-IF                                                            00062
+               END-IF                                                               00063
+               PUT FILEB                                                            00064
+         END-IF                                                                     00065
+         IF DCLS = 202 THRU 212 234 278 295 402 THRU 412 434 478 49                 00066
+             SUB1 = SUB1 + 53                                                       00067
+             CTR = CTR + 1                                                          00068
+         END-IF                                                                     00069
+     END-IF                                                                         00070
+     SUB1 = SUB1 + 53                                                               00071
+     CTR = CTR + 1                                                                  00072
+ END-DO                                                                             00073

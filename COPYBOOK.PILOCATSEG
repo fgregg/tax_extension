@@ -1,0 +1,81 @@
+ 00001 *----------------------------------------------------------------*
+ 00002 *                      *  L O C A T I O N  *
+ 00003      05  LC-LOCATESEG.
+ 00004 *                                              1-200 LOCATION
+ 00005          10  LC-SEGKEY.
+ 00006 *                                              1-12  KEY -
+ 00007 *                                                  LOCATE SEGMENT
+ 00008              15  LC-TOWNNO      PIC XX.
+ 00009 *                                              1-2   KEY -
+ 00010 *                                                     TOWN NUMBER
+ 00011              15  LC-CITYCODE    PIC X(5).
+ 00012 *                                              3-7   KEY -
+ 00013 *                                                    CITY CODE
+ 00014              15  LC-STRTCODE    PIC X(5).
+ 00015 *                                              8-12  KEY -
+ 00016 *                                                    STREET CODE
+ 00017          10  LC-CITYNAME    PIC X(28).
+ 00018 *                                             13-40  CITY NAME
+ 00019          10  LC-STRTNAME    PIC X(22).
+ 00020 *                                             41-40  STREET NAME
+ 00021          10  LC-STRTDIR     PIC XX.
+ 00022 *                                             63-64  STREET
+ 00023 *                                                     DIRECTION
+ 00024          10  LC-SUFFIX      PIC X(4).
+ 00025 *                                             65-68  STREET
+ 00026 *                                                     SUFFIX
+ 00027          10  LC-HOUSENO     PIC 9(10).
+ 00028 *                                             69-78  HOUSE
+ 00029 *                                                     NO.
+ 00030          10  LC-ZIPCODE     PIC X(09).
+ 00031 *                                             79-87  ZIP
+ 00032 *                                                     CODE
+ 00033          10  LC-APTCODE     PIC X(05).
+ 00034 *                                             88-92  APT.
+ 00035 *                                                     NO.
+ 00036          10  LC-LOCATYPE    PIC XX.
+ 00037 *                                             93-94  LOCATION
+ 00038 *                                                     TYPE
+ 00039          10  LC-STATUS      PIC X.
+ 00040 *                                             95-95  STREET
+ 00041 *                                                     STATUS
+ 00042          10  LC-FILEID      PIC X.
+ 00043 *                                             96-96  FILE
+ 00044 *                                                     ID.
+ 00045          10  LC-UNINCPID    PIC X.
+ 00046 *                                             97-97  UNINCOR.
+ 00047 *                                                     ID.
+ 00048          10  LC-ALSTNAME    PIC X(22).
+ 00049 *                                             98-119 STREET NAME
+ 00050 *                                                      (ALT.)
+ 00051          10  LC-ALSTDIR     PIC XX.
+ 00052 *                                            120-121 STREET
+ 00053 *                                                     DIRECTION
+ 00054 *                                                      (ALT.)
+ 00055          10  LC-ALSTSUFF    PIC X(4).
+ 00056 *                                            122-125 STREET
+ 00057 *                                                     SUFFIX
+ 00058 *                                                      (ALT.)
+ 00059          10  LC-ALSTHSNO    PIC X(10).
+ 00060 *                                            126-135 HOUSE
+ 00061 *                                                     NO.
+ 00062 *                                                      (ALT.)
+ 00063          10  LC-ALSTLOTY    PIC XX.
+ 00064 *                                            136-137 LOCATION
+ 00065 *                                                     TYPE
+ 00066 *                                                      (ALT.)
+ 00067          10  LC-UPDTID      PIC X(8).
+ 00068 *                                            138-145 UPDATE
+ 00069 *                                                     ID.
+ 00070          10  LC-UPDTDATE    PIC 9(8).
+ 00071 *                                            146-153 UPDATE
+ 00072 *                                                     DATE
+ 00073 *                                                   (CCYYMMDD)
+ 00074          10  LC-REMARKS     PIC X(30).
+ 00075 *                                            154-183 REMARKS
+ 00076          10  LC-ALT-IND     PIC X(1).
+ 00077 *                                            184-184 ALT HOUSE NO
+ 00078 *                                                     INDICATOR
+ 00079 *                                                        Y/N
+ 00080          10  LC-FILLER      PIC X(16).
+ 00081 *                                            185-200 FILLER

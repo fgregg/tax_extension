@@ -1,0 +1,226 @@
+ 00001 *----------------------------------------------------------------*
+ 00002 *               *  SENIOR FREEZE - MASTER SEGMENT  *
+ 00003      05  C145-SENFRZMASTER.
+ 00004 *                                              1-390 SENIOR
+ 00005 *                                                     FREEZE
+ 00006 *                                                     MASTER
+ 00007 *                                                     SEGMENT
+ 00008          10  C145-RECCODE   PIC X.
+ 00009 *                                              1-1   KEY -
+ 00010 *                                                     RECORD CODE
+ 00011 *                                                     1=NON-COOP
+ 00012 *                                                     2=COOP
+ 00013          10  C145-MASTNAME  PIC X(50).
+ 00014 *                                              2-51  MASTER NAME
+ 00015          10  C145-MASTMAIL.
+ 00016 *                                             52-123 MASTER
+ 00017 *                                                     MAILING
+ 00018 *                                                     ADDRESS
+ 00019              15  C145-HSENO PIC X(5).
+ 00020 *                                             52-56  HOUSE NO.
+ 00021              15  C145-DIR   PIC XX.
+ 00022 *                                             57-58  DIRECTION
+ 00023              15  C145-STREET PIC X(22).
+ 00024 *                                             59-80  STREET
+ 00025              15  C145-SUFF  PIC X(4).
+ 00026 *                                             81-84  SUFFIX
+ 00027              15  C145-CITY  PIC X(28).
+ 00028 *                                             85-112 CITY
+ 00029              15  C145-STATE PIC XX.
+ 00030 *                                            113-114 STATE
+ 00031              15  C145-ZIP   PIC 9(9).
+ 00032 *                                            115-123 ZIP CODE
+ 00033          10  C145-BLDGUNITS PIC 9(5).
+ 00034 *                                            124-128 BUILDING
+ 00035 *                                                     UNITS
+ 00036          10  C145-BLDGSHARES PIC 9(6).
+ 00037 *                                            129-134 BUILDING
+ 00038 *                                                     SHARES
+ 00039          10  C145-PROPCT    PIC 9V9(6).
+ 00040 *                                            135-141 PRORATION
+ 00041 *                                                     PERCENT
+ 00042          10  C145-KEYPCL    PIC 9(14).
+ 00043 *                                            142-155 KEY
+ 00044 *                                                     PARCEL NO.
+ 00045          10  C145-SPLTCD    PIC 9.
+ 00046 *                                            156-156 SPLIT CODE
+ 00047          10  C145-OCCFAC    PIC 9(4)V9.
+ 00048 *                                            157-161 OCCUPANCY
+ 00049 *                                                     FACTOR
+ 00050          10  C145-MAINTIND  PIC 9.
+ 00051 *                                            162-162 MAINTENANCE
+ 00052 *                                                     INDICATOR
+ 00053 *                                                     FOR ABOVE
+ 00054 *                                                     4 FIELDS
+ 00055          10  C145-TERMID    PIC X(4).
+ 00056 *                                            163-166 TERMINAL I.D.
+ 00057          10  C145-UPDTID    PIC X(8).
+ 00058 *                                            167-174 UPDATE I.D.
+ 00059          10  C145-UPDTDATE  PIC 9(8).
+ 00060 *                                            175-182 UPDATE DATE
+ 00061 *                                                     (CCYYMMDD)
+ 00062          10  C145-UPDTTIME  PIC 9(7).
+ 00063 *                                            183-189 UPDATE TIME
+ 00064 *                                                     (0HHMMSS)
+ 00065          10  C145-288EXPAV  PIC 9(9).
+ 00066 *                                            190-198 288
+ 00067 *                                                     EXPIRATION
+ 00068 *                                                     ASSESSED
+ 00069 *                                                     VALUATION
+ 00070          10  C145-288EXPEV  PIC 9(9).
+ 00071 *                                            199-207 288
+ 00072 *                                                     EXPIRATION
+ 00073 *                                                     EQUALIZED
+ 00074 *                                                     VALUATION
+ 00075          10  C145-288OVRLIMAV PIC 9(9).
+ 00076 *                                            208-216 288
+ 00077 *                                                     OVER LIMIT
+ 00078 *                                                     ASSESSED
+ 00079 *                                                     VALUATION
+ 00080          10  C145-288OVRLIMEV PIC 9(9).
+ 00081 *                                            217-225 288
+ 00082 *                                                     OVER LIMIT
+ 00083 *                                                     EQUALIZED
+ 00084 *                                                     VALUATION
+ 00085          10  C145-BVYNOCALCIND PIC X.
+ 00086 *                                            226-226 BASE VALUE
+ 00087 *                                                     YEAR
+ 00088 *                                                     CANNOT BE
+ 00089 *                                                     CALCULATED
+ 00090 *                                                     BY PROGRAM
+ 00091 *                                                     INDICATOR
+ 00092          10  C145-BVYMANCALCIND PIC X.
+ 00093 *                                            227-227 BASE VALUE
+ 00094 *                                                     YEAR MANUAL
+ 00095 *                                                     CALCULATION
+ 00096 *                                                     INDICATOR
+ 00097          10  C145-BASVALYR   PIC 9(4).
+ 00098 *                                            228-231 BASE VALUE
+ 00099 *                                                     YEAR
+ 00100          10  C145-BVYCLS     PIC 9(6).
+ 00101 *                                            232-237 BASE VALUE
+ 00102 *                                                     YEAR CLASS
+ 00103          10  C145-BVYFULLAV  PIC 9(9).
+ 00104 *                                            238-246 BASE VALUE
+ 00105 *                                                     YEAR FULL
+ 00106 *                                                     ASSESSED
+ 00107 *                                                     VALUATION
+ 00108          10  C145-BVYEV      PIC 9(9).
+ 00109 *                                            247-255 BASE VALUE
+ 00110 *                                                     YEAR
+ 00111 *                                                     EQUALIZED
+ 00112 *                                                     VALUATION
+ 00113          10  C145-BVYELCOMPFULLAV PIC 9(9).
+ 00114 *                                            256-264 BASE VALUE
+ 00115 *                                                     YEAR ELIGIBL
+ 00116 *                                                     COMPUTED
+ 00117 *                                                     FULL
+ 00118 *                                                     ASSESSED
+ 00119 *                                                     VALUATION
+ 00120          10  C145-BVYTOTELCOMPEV PIC 9(9).
+ 00121 *                                            265-273 BASE VALUE
+ 00122 *                                                     YEAR TOTAL
+ 00123 *                                                     ELIGIBLE
+ 00124 *                                                     COMPUTED
+ 00125 *                                                     EQUALIZED
+ 00126 *                                                     ASSESSED
+ 00127          10  C145-CYCLS      PIC 9(6).
+ 00128 *                                            274-279 CURRENT YEAR
+ 00129 *                                                     CLASS
+ 00130          10  C145-CYFARMIND    PIC X.
+ 00131 *                                            280-280 CURRENT YEAR
+ 00132 *                                                     FARM
+ 00133 *                                                     INDICATOR
+ 00134          10  C145-CYFULLAV   PIC 9(9).
+ 00135 *                                            281-289 CURRENT YEAR
+ 00136 *                                                     FULL
+ 00137 *                                                     ASSESSED
+ 00138 *                                                     VALUATION
+ 00139          10  C145-CYELCOMPAV PIC 9(9).
+ 00140 *                                            290-298 CURRENT YEAR
+ 00141 *                                                     ELIGIBLE
+ 00142 *                                                     COMPUTED
+ 00143 *                                                     ASSESSED
+ 00144 *                                                     VALUATION
+ 00145          10  C145-CYELCOMPEV PIC 9(9).
+ 00146 *                                            299-307 CURRENT YEAR
+ 00147 *                                                     ELIGIBLE
+ 00148 *                                                     COMPUTED
+ 00149 *                                                     EQUALIZED
+ 00150 *                                                     VALUATION
+ 00151          10  C145-CYNOTELAV  PIC 9(9).
+ 00152 *                                            308-316 CURRENT YEAR
+ 00153 *                                                     NOT ELIGIBLE
+ 00154 *                                                     ASSESSED
+ 00155 *                                                     VALUATION
+ 00156          10  C145-CYNOTELEV  PIC 9(9).
+ 00157 *                                            317-325 CURRENT YEAR
+ 00158 *                                                     NOT ELIGIBLE
+ 00159 *                                                     EQUALIZED
+ 00160 *                                                     VALUATION
+ 00161          10  C145-CYFNLEVDIFF PIC 9(9).
+ 00162 *                                            326-334 CURRENT YEAR
+ 00163 *                                                     FINAL
+ 00164 *                                                     EQUALIZED
+ 00165 *                                                     VALUATION
+ 00166 *                                                     FOR TAX
+ 00167 *                                                     COMPUTATION
+ 00168          10  C145-HOUNITS     PIC 9(5).
+ 00169 *                                            335-339 NUMBER OF
+ 00170 *                                                     UNITS WITH
+ 00171 *                                                     HOMEOWNER
+ 00172 *                                                     EXEMPTIONS
+ 00173          10  C145-HSUNITS     PIC 9(5).
+ 00174 *                                            340-344 NUMBER OF
+ 00175 *                                                     UNITS WITH
+ 00176 *                                                     HOMESTEAD
+ 00177 *                                                     EXEMPTIONS
+ 00178          10  C145-SFSHARES    PIC 9(6).
+ 00179 *                                            345-350 NUMBER OF
+ 00180 *                                                     SHARES WITH
+ 00181 *                                                     SENIOR FREEZ
+ 00182          10  C145-CYFULLEV   PIC 9(9).
+ 00183 *                                            351-359 CURRENT YEAR
+ 00184 *                                                     FULL
+ 00185 *                                                     EQUALIZED
+ 00186 *                                                     VALUATION
+ 00187          10  C145-CALC-TYP   PIC X.
+ 00188 *                                            360-360 CALCULATION
+ 00189 *                                                     TYPE
+ 00190          10  C145-BASVALYR-OR  PIC 9(4).
+ 00191 *                                            361-364 BASE VALUE
+ 00192 *                                                     YEAR
+ 00193          10  C145-BVYFULLAV-OR PIC 9(9) PACKED-DECIMAL.
+ 00194 *                                            365-369 BASE VALUE
+ 00195 *                                                     YEAR FULL
+ 00196 *                                                     ASSESSED
+ 00197 *                                                     VALUATION
+ 00198          10  C145-BVYEV-OR   PIC 9(9) PACKED-DECIMAL.
+ 00199 *                                            370-374 BASE VALUE
+ 00200 *                                                     YEAR
+ 00201 *                                                     EQUALIZED
+ 00202 *                                                     VALUATION
+ 00203          10  C145-BVYELCOMPFULLAV-OR PIC 9(9) PACKED-DECIMAL.
+ 00204 *                                            375-379 BASE VALUE
+ 00205 *                                                     YEAR ELIGIBL
+ 00206 *                                                     COMPUTED
+ 00207 *                                                     FULL
+ 00208 *                                                     ASSESSED
+ 00209 *                                                     VALUATION
+ 00210          10  C145-BVYTOTELCOMPEV-OR PIC 9(9) PACKED-DECIMAL.
+ 00211 *                                            380-384 BASE VALUE
+ 00212 *                                                     YEAR TOTAL
+ 00213 *                                                     ELIGIBLE
+ 00214 *                                                     COMPUTED
+ 00215 *                                                     EQUALIZED
+ 00216 *                                                     ASSESSED
+ 00217          10  C145-CYFNLEVDIFF-OR PIC 9(9)   PACKED-DECIMAL.
+ 00218 *                                            385-389 CURRENT YEAR
+ 00219 *                                                     FINAL
+ 00220 *                                                     EQUALIZED
+ 00221 *                                                     VALUATION
+ 00222 *                                                     FOR TAX
+ 00223 *                                                     COMPUTATION
+ 00224          10  C145-BVYMANCALCIND-OR  PIC X(1).
+ 00225 *                                            390-390
+ 00226 *----------------------------------------------------------------*

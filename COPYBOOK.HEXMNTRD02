@@ -1,0 +1,50 @@
+ 00001      05 HE-ACT         PIC X.
+ 00002      05 HE-KEY.
+ 00003         10 HE-TWN      PIC 9(2).
+ 00004         10 HE-VOL      PIC 9(3).
+ 00005         10 HE-PROP     PIC 9(14).
+ 00006         10 HE-PROP-R REDEFINES HE-PROP.
+ 00007            15 HE-PROP-1  PIC 9(2).
+ 00008            15 HE-PROP-2  PIC 9(2).
+ 00009            15 HE-PROP-3  PIC 9(3).
+ 00010            15 HE-PROP-4  PIC 9(3).
+ 00011            15 HE-PROP-5  PIC 9(4).
+ 00012      05 HE-CLS         PIC 9(3).
+ 00013      05 HE-CLS-R REDEFINES HE-CLS.
+ 00014         10 HE-MA       PIC 9.
+ 00015         10 HE-MI       PIC 9(2).
+ 00016      05 HE-PRO         PIC 9V9(6).
+ 00017      05 HE-PRO-R REDEFINES HE-PRO.
+ 00018         10 HE-PRO-1    PIC 9.
+ 00019         10 HE-PRO-2    PIC 9(6).
+ 00020      05 HE-COOP        PIC 9(5).
+ 00021      05 HE-COOP-R REDEFINES HE-COOP.
+ 00022         10 HE-COOP-1   PIC 9(2).
+ 00023         10 HE-COOP-2   PIC 9(3).
+ 00024      05 HE-AVAL        PIC 9(9).
+ 00025      05 HE-AVAL-R REDEFINES HE-AVAL.
+ 00026         10 HE-AVAL-1   PIC 9(3).
+ 00027         10 HE-AVAL-2   PIC 9(3).
+ 00028         10 HE-AVAL-3   PIC 9(3).
+ 00029      05 HE-EQVAL       PIC 9(9).
+ 00030      05 HE-EQVAL-R REDEFINES HE-EQVAL.
+ 00031         10 HE-EQVAL-1  PIC 9(3).
+ 00032         10 HE-EQVAL-2  PIC 9(3).
+ 00033         10 HE-EQVAL-3  PIC 9(3).
+ 00034      05 HE-YR          PIC 9(2).
+ 00035      05 HE-YR-R REDEFINES HE-YR  PIC X(2).
+ 00036      05 HE-OCCFAC      PIC 999V9.
+ 00037      05 HE-OCCFAC-R REDEFINES HE-OCCFAC.
+ 00038         10 HE-OCC-1    PIC 999.
+ 00039         10 HE-OCC-2    PIC 9.
+ 00040      05 HE-NAME        PIC X(22).
+ 00041      05 HE-ADDR        PIC X(22).
+ 00042      05 HE-CITY        PIC X(12).
+ 00043      05 HE-STATE       PIC X(2).
+ 00044      05 HE-ZIP         PIC 9(5).
+ 00045      05 HE-NPHE-EXAMT  PIC 9(7).
+ 00046      05 HE-NPHE-EXAMT-R REDEFINES HE-NPHE-EXAMT PIC X(7).
+ 00047      05 HE-NPHE-BSYR   PIC 9(4).
+ 00048      05 HE-NPHE-BSYR-R  REDEFINES HE-NPHE-BSYR  PIC X(4).
+ 00049      05 HE-STATUS      PIC X(2).
+ 00050      05 FILLER         PIC X(5).

@@ -1,0 +1,46 @@
+ *          DATA SET ASHMA856E  AT LEVEL 027 AS OF 07/20/00
+ MACRO                                                                              00001
+ FILE FILEA                                                                         00002
+ PROPA  6 8 P 0                                                                     00003
+ YEARA 16 2 A                                                                       00004
+ FILE FILEN                                                                         00005
+ PROPN  7 14 N                                                                      00006
+ YEARN 21  2 A                                                                      00007
+ FILE FILEB                                                                         00008
+ PROPB  6 8 P 0                                                                     00009
+ YEARB 14 4 A                                                                       00010
+ * WORKING STORAGE FIELDS                                                           00011
+ CNTA   W 4 P                                                                       00012
+ CNTN   W 4 P                                                                       00013
+ CNTB   W 4 P                                                                       00014
+ CNTUN  W 4 P                                                                       00015
+ CNTTN  W 4 P                                                                       00016
+ *                                                                                  00017
+ JOB INPUT (FILEN KEY(PROPN) +                                                      00018
+            FILEA KEY(PROPA)) FINISH EOJ                                            00019
+ *                                                                                  00020
+ IF MATCHED                                                                         00021
+    CNTA = CNTA + 1                                                                 00022
+    RECORD-LENGTH(FILEB) = RECORD-LENGTH(FILEA)                                     00023
+    PUT FILEB FROM FILEA                                                            00024
+    CNTB = CNTB + 1                                                                 00025
+    GOTO JOB                                                                        00026
+ END-IF                                                                             00027
+ *                                                                                  00028
+ IF FILEA                                                                           00029
+    CNTA = CNTA + 1                                                                 00030
+    GOTO JOB                                                                        00031
+ END-IF                                                                             00032
+ *                                                                                  00033
+ IF FILEN                                                                           00034
+    DISPLAY 'UNMATCHED QUALIFIED  ' PROPN                                           00035
+    CNTUN = CNTUN + 1                                                               00036
+ END-IF                                                                             00037
+ *                                                                                  00038
+ EOJ. PROC                                                                          00039
+ DISPLAY 'TOTALS FOR ASHMA856E ********** '                                         00040
+ DISPLAY ' '                                                                        00041
+ DISPLAY 'HISTORY RECORDS      = ' CNTA                                             00042
+ DISPLAY 'UNMATCHED QUALIFIED  = ' CNTUN                                            00043
+ DISPLAY 'QUALIFIED HISTORY    = ' CNTB                                             00044
+ END-PROC                                                                           00045

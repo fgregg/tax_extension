@@ -1,0 +1,32 @@
+ 00001      05 DV-VOL            PIC 999      COMP-3.
+ 00002      05 DV-PROP           PIC 9(15)    COMP-3.
+ 00003      05 DV-TXCD           PIC 9(5)     COMP-3.
+ 00004      05 DV-ASSD-VAL       PIC S9(11)   COMP-3.
+ 00005      05 DV-DV-FC          PIC S9(5)    COMP-3.
+ 00006      05 DV-DV-FCR REDEFINES DV-DV-FC
+ 00007                           PIC S9V9(4)  COMP-3.
+ 00008      05 DV-DV-VAL         PIC S9(11)   COMP-3.
+ 00009      05 DV-STAT           PIC 9.
+ 00010      05 DV-MA-MI.
+ 00011         10 DV-MA-CLS      PIC 9.
+ 00012         10 DV-MI-CLS      PIC 99.
+ 00013      05 DV-CLASS REDEFINES DV-MA-MI
+ 00014                           PIC 9(3).
+ 00015      05 DV-SC-HMESTD-AMT  PIC S9(11)   COMP-3.
+ 00016      05 DV-VET-EX-AMT     PIC S9(11)   COMP-3.
+ 00017      05 DV-HOME-AMT       PIC S9(11)   COMP-3.
+ 00018      05 DV-EZ-ABATAMT     PIC S9(11)   COMP-3.
+ 00019      05 DV-TXTYP          PIC 9.
+ 00020         88  DV-CUR-TXTYP               VALUE 0.
+ 00021         88  DV-AIR-POLL-TXTYP          VALUE 3.
+ 00022         88  DV-CIRCULATOR              VALUE 5.
+ 00023      05 DV-SRFRZEXVAL     PIC 9(11)    COMP-3.
+ 00024      05 DV-IA-IND         PIC X.
+ 00025      05 DV-EXOWNEXVAL     PIC 9(11)    COMP-3.
+ 00026      05 DV-DIS-IND        PIC X.
+ 00027      05 DV-RET-VET        PIC 9(11)    COMP-3.
+ 00028      05 DV-DIS-PER        PIC 9(11)    COMP-3.
+ 00029      05 DV-DIS-VET-L75    PIC 9(11)    COMP-3.
+ 00030      05 DV-DIS-VET-G75    PIC 9(11)    COMP-3.
+ 00031      05 DV-DIV-PROP-NO    PIC 9(14)    COMP-3.
+ 00032      05 FILLER            PIC X(12).

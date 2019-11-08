@@ -1,0 +1,24 @@
+ 00001 *----------------------------------------------------------------*
+ 00002 *
+ 00003      05  PI2-DBD-NAME      PIC X(8).
+ 00004      05  PI2-SEGMENT-LVL   PIC X(2).
+ 00005          88  PI2-DB-1ST-SEG-LEVEL  VALUE '01'.
+ 00006          88  PI2-DB-2ND-SEG-LEVEL  VALUE '02'.
+ 00007          88  PI2-DB-3RD-SEG-LEVEL  VALUE '03'.
+ 00008          88  PI2-DB-4TH-SEG-LEVEL  VALUE '04'.
+ 00009          88  PI2-DB-5TH-SEG-LEVEL  VALUE '05'.
+ 00010      05  PI2-STATUS-CODE   PIC X(2).
+ 00011          88  PI2-DB-GOOD-STATUS    VALUE SPACE.
+ 00012          88  PI2-SEG-FOUND         VALUE SPACE.
+ 00013          88  PI2-DB-END            VALUE 'GB'.
+ 00014          88  PI2-SEG-NOTFND        VALUE 'GE'.
+ 00015          88  PI2-DUPLICATE-SEG     VALUE 'II'.
+ 00016          88  PI2-DUP-SEG-2NDRY-INDX VALUE 'NI'.
+ 00017          88  PI2-UP-LVL            VALUE 'GA'.
+ 00018          88  PI2-NEW-SGTP-SAME-LVL VALUE 'GK'.
+ 00019      05  PI2-PROC-OPT      PIC X(4).
+ 00020      05  FILLER            PIC S9(5) COMP.
+ 00021      05  PI2-NAME-FDBK     PIC X(8).
+ 00022      05  PI2-KEY-FDBK-LNG  PIC S9(5) COMP.
+ 00023      05  PI2-SEN-SEG       PIC S9(5) COMP.
+ 00024      05  PI2-KEY-FDBK.

@@ -1,0 +1,33 @@
+ *          DATA SET ASREA896E  AT LEVEL 002 AS OF 07/24/08
+ MACRO                                                                   00000100   00001
+ FILE FILEA                                                              00000200   00002
+ TOWN  1 2 N                                                             00000300   00003
+ VOL   3 3 N                                                             00000400   00004
+ PROP  6 14 N MASK('99-99-999-999-9999')                                 00000500   00005
+ ENTZONE 20 9 N                                                          00000600   00006
+ MTCHCNTR W 3 N 0                                                        00000700   00007
+ NOMTCHCNTR W 3 N 0                                                      00000800   00008
+                                                                         00000900   00009
+ FILE FILE2                                                              00001000   00010
+ TOWN2 14 1 U                                                            00001100   00011
+ VOL2   2 2 P                                                            00001200   00012
+ PROP2  4 8 P                                                            00001300   00013
+ BLDG  92 5 P                                                            00001400   00014
+                                                                         00001500   00015
+ JOB INPUT (FILEA KEY(VOL PROP) +                                        00001600   00016
+            FILE2 KEY(VOL2 PROP2)) FINISH(EOJ)                           00001700   00017
+                                                                         00001800   00018
+ IF MATCHED                                                              00001900   00019
+    DISPLAY 'MATCHED - ' TOWN ' ' VOL ' ' PROP ' ' ENTZONE ' ' BLDG      00002000   00020
+    MTCHCNTR = MTCHCNTR + 1                                              00002100   00021
+ ELSE                                                                    00002200   00022
+    IF FILEA                                                             00002300   00023
+       DISPLAY 'UNMATCHED - ' TOWN ' ' VOL ' ' PROP ' ' ENTZONE          00002400   00024
+       NOMTCHCNTR = NOMTCHCNTR + 1                                       00002500   00025
+       END-IF                                                            00002600   00026
+ END-IF                                                                  00002700   00027
+                                                                         00002800   00028
+ EOJ. PROC                                                               00002900   00029
+ DISPLAY 'TOTAL ABATEMENT RECORDS MATCHED   = ' MTCHCNTR                 00003000   00030
+ DISPLAY 'TOTAL ABATEMENT RECORDS UNMATCHED = ' NOMTCHCNTR               00003100   00031
+ END-PROC                                                                00003200   00032

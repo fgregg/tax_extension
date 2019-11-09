@@ -1,0 +1,29 @@
+00001      05  HM-VOL        PIC 999    COMP-3.
+00002      05  HM-PROP       PIC 9(15)  COMP-3.
+00003      05  HM-TXCD       PIC 9(5)   COMP-3.
+00004      05  HM-STAT1      PIC 9.
+00005      05  HM-STAT2      PIC 9.
+00006      05  HM-CLERK-CLS  PIC 9.
+00007      05  HM-CLS        PIC 999    COMP-3.
+00008      05  HM-YR         PIC 99.
+00009      05  HM-NPHE-STATUS  PIC XX.
+00010      05  HM-PRORAT     PIC 9V9(6) COMP-3.
+00011      05  HM-COOP       PIC 9(5)   COMP-3.
+00012      05  HM-OCCFAC     PIC 9999V9 COMP-3.
+00013      05  FILLER        PIC X.
+00014      05  HM-EQFACT     PIC 9V9(4)     COMP-3.
+00015      05  HM-HIV        PIC 9.
+00016      05  HM-ASSDVAL    PIC 9(9)   COMP-3.
+00017      05  HM-EQVAL      PIC 9(9)   COMP-3.
+00018      05  HM-NPHE       PIC 9(9)   COMP-3.
+00019      05  HM-NPHE-BSYR  PIC 9(4).
+00020      05  FILLER        PIC X(01).
+00021      05  HM-NAME       PIC X(22).
+00022      05  HM-ADDRESS    PIC X(22).
+00023      05  HM-CITY       PIC X(12).
+00024      05  HM-STATE      PIC XX.
+00025      05  HM-ZIP        PIC 9(9)   COMP-3.
+00026      05  HM-C-OF-E     PIC 9(5)   COMP-3.
+00027      05  HM-STAT3      PIC 9.
+00028      05  FILLER        PIC X(5).
+00029      05  HM-TXTYP      PIC X.

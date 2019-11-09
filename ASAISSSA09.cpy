@@ -1,0 +1,75 @@
+00001 **************************************************************
+00002 *             ASSESSOR ASSESSMENT INFORMATION                *
+00003 *                       DATA BASE                            *
+00004 *             PATH TO: 1) ROOT SEGMENT                       *
+00005 *                      2) ASSESSMENT/TAX INFORMATION SEGMENT *
+00006 *                      3) CERTIFICATE OF ERROR I.D. SEGMENT  *
+00007 *                      4) CERTIFICATE OF ERROR ACTION SEGMENT*
+00008 **************************************************************
+00009 ******************************************************************
+00010 * MODIFICATION: 11/03/2004. TJM. INCREASE SIZE OF LVL3-ARG       *
+00011 ******************************************************************
+00012 *
+00013  01  SSAS.
+00014 *--------------------- QUALIFIED SSA'S ----------------------*
+00015      05  LVL1-QUAL-SSA.
+00016          10  LVL1-SEGNAME        PIC X(8)   VALUE 'PROPSEG '.
+00017          10  FILLER              PIC X      VALUE '('.
+00018          10  LVL1-SEGKEY         PIC X(8)   VALUE 'PPROP   '.
+00019          10  LVL1-RO             PIC XX     VALUE 'EQ'.
+00020          10  LVL1-ARG            PIC 9(15)    COMP-3.
+00021          10  FILLER              PIC X      VALUE ')'.
+00022      05  LVL2-QUAL-SSA.
+00023          10  LVL2-SEGNAME        PIC X(8)   VALUE 'ASSMTSEG'.
+00024          10  FILLER              PIC X      VALUE '('.
+00025          10  LVL2-SEGKEY         PIC X(8)   VALUE 'PYSRCH  '.
+00026          10  LVL2-RO             PIC XX     VALUE 'EQ'.
+00027          10  LVL2-ARG.
+00028              15  LVL2-PROCYR     PIC 99.
+00029              15  LVL2-TXYR       PIC 99.
+00030              15  LVL2-TXTYP      PIC 9.
+00031          10  FILLER              PIC X      VALUE ')'.
+00032      05  LVL3-QUAL-SSA.
+00033          10  LVL3-SEGNAME        PIC X(8)   VALUE 'COFESEG '.
+00034          10  FILLER              PIC X      VALUE '('.
+00035          10  LVL3-SEGKEY         PIC X(8)   VALUE 'PCOENUMB'.
+00036          10  LVL3-RO             PIC XX     VALUE 'EQ'.
+00037          10  LVL3-ARG            PIC 9(7).
+00038          10  FILLER              PIC X      VALUE ')'.
+00039      05  LVL4-QUAL-SSA.
+00040          10  LVL4-SEGNAME        PIC X(8)   VALUE 'DATASEG '.
+00041          10  FILLER              PIC X      VALUE '('.
+00042          10  LVL4-SEGKEY         PIC X(8)   VALUE 'PTACTNO '.
+00043          10  LVL4-RO             PIC XX     VALUE 'EQ'.
+00044          10  LVL4-ARG            PIC 999.
+00045          10  FILLER              PIC X      VALUE ')'.
+00046 *-------------------- UNQUALIFIED SSA'S ---------------------*
+00047      05  LVL1-UNQUAL-SSA         PIC X(9)   VALUE 'PROPSEG'.
+00048      05  LVL2-UNQUAL-SSA         PIC X(9)   VALUE 'ASSMTSEG'.
+00049      05  LVL3-UNQUAL-SSA         PIC X(9)   VALUE 'COFESEG'.
+00050      05  LVL4-UNQUAL-SSA         PIC X(9)   VALUE 'DATASEG'.
+00051 *-------------------- PATH  SSA'S   -------------------------*
+00052      05  LVL1-QUAL-SSA-PATH.
+00053          10  FILLER              PIC X(10)  VALUE 'PROPSEG *D'.
+00054          10  FILLER              PIC X      VALUE '('.
+00055          10  FILLER              PIC X(8)   VALUE 'PPROP   '.
+00056          10  LVL1-RO-P           PIC XX     VALUE 'EQ'.
+00057          10  LVL1-ARG-P          PIC 9(15)    COMP-3.
+00058          10  FILLER              PIC X      VALUE ')'.
+00059      05  LVL2-QUAL-SSA-PATH.
+00060          10  FILLER              PIC X(10)  VALUE 'ASSMTSEG*D'.
+00061          10  FILLER              PIC X      VALUE '('.
+00062          10  FILLER              PIC X(8)   VALUE 'PYSRCH  '.
+00063          10  LVL2-RO-P           PIC XX     VALUE 'EQ'.
+00064          10  LVL2-ARG-P.
+00065              15  LVL2-PROCYR-P   PIC 99.
+00066              15  LVL2-TXYR-P     PIC 99.
+00067              15  LVL2-TXTYP-P    PIC 9.
+00068          10  FILLER              PIC X      VALUE ')'.
+00069      05  LVL3-QUAL-SSA-PATH.
+00070          10  FILLER              PIC X(10)  VALUE 'COFESEG *D'.
+00071          10  FILLER              PIC X      VALUE '('.
+00072          10  FILLER              PIC X(8)   VALUE 'PCOENUMB'.
+00073          10  LVL3-RO-P           PIC XX     VALUE 'EQ'.
+00074          10  LVL3-ARG-P          PIC 9(7).
+00075          10  FILLER              PIC X      VALUE ')'.

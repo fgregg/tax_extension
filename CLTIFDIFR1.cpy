@@ -1,0 +1,26 @@
+00001 *    * T A X   I N C R E M E N T   F I N A N C E
+00002 *                  D I F F E R E N C E   F I L E
+00003      05  TD-VOL           PIC 9(3).
+00004 *                                              1-3   VOLUME
+00005      05  TD-PROP          PIC 9(14).
+00006 *                                              4-17  PROPERTY NO.
+00007      05  TD-TXTYP         PIC 9.
+00008 *                                             18-18  TAX TYPE
+00009      05  TD-TXYR          PIC 9(4).
+00010 *                                             19-22  TAX YEAR
+00011 *                                                     ADDED
+00012      05  TD-TXCD          PIC 9(5).
+00013 *                                             23-27  TAX CODE
+00014      05  TD-AGCY          PIC 9(9).
+00015 *                                             28-36  AGENCY
+00016      05  TD-FRZEQVAL      PIC S9(11).
+00017 *                                             37-47  FROZEN
+00018 *                                                     EQUALIZED
+00019 *                                                     VALUATION
+00020      05  TD-CUREQVAL      PIC S9(11).
+00021 *                                             48-58  CURRENT
+00022 *                                                    EQUALIZED VAL
+00023      05  TD-TIFDIFF       PIC S9(11).
+00024 *                                             59-69  TIF DIFFERENC
+00025      05  FILLER           PIC X(43).
+00026 *                                             70-112 FILLER

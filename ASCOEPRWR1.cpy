@@ -1,0 +1,394 @@
+00001 *----------------------------------------------------------------*
+00002 *  CHANGED OCT. 19, 2001 BY TJM
+00003 *  CHANGED NOV. 04, 2004 BY TJM INCREASE SIZE OF BACERTNO
+00004 *
+00005      05  C515-TOWN          PIC 999       COMP-3.
+00006 *                                              1-2   TOWN
+00007      05  C515-VOL           PIC 999       COMP-3.
+00008 *                                              3-4   VOLUME
+00009      05  C515-PROP          PIC 9(15)     COMP-3.
+00010 *                                              5-12  PIN
+00011      05  C515-PROCYR        PIC 99.
+00012 *                                             13-14  PROCESS YEAR
+00013      05  C515-TXYR          PIC 99.
+00014 *                                             15-16  TAX YEAR
+00015      05  C515-TXTYP         PIC 9.
+00016 *                                             17-17  TAX TYPE
+00017      05  C515-TXSTAT        PIC 9.
+00018 *                                             18-18  TAX STATUS
+00019      05  C515-BACLS         PIC 9(7)      COMP-3.
+00020 *                                             19-22  BD/APPLS
+00021 *                                                      CLASS
+00022      05  C515-AS1ACT        PIC 9.
+00023 *                                             23-23  ASSESSOR
+00024 *                                                      ACTION 1
+00025      05  C515-AS2ACT        PIC 9.
+00026 *                                             24-24  ASSESSOR
+00027 *                                                      ACTION 2
+00028      05  C515-BAACT         PIC 9.
+00029 *                                             25-25  BD/APPLS
+00030 *                                                      ACTION
+00031      05  C515-BALAND        PIC 9(9)      COMP-3.
+00032 *                                             26-30  BD/APPLS
+00033 *                                                      LAND VAL
+00034      05  C515-BAIMP         PIC 9(9)      COMP-3.
+00035 *                                             31-35  BD/APPLS
+00036 *                                                      IMP VAL
+00037      05  C515-BATOT         PIC 9(9)      COMP-3.
+00038 *                                             36-40  BD/APPLS
+00039 *                                                      TOT VAL
+00040      05  C515-BACERTNO      PIC 9(7)      COMP-3.
+00041 *                                             41-44  CERTIFICATE
+00042 *                                                      NUMBER
+00043      05  C515-ISSDTE        PIC 9(9)      COMP-3.
+00044 *                                             45-49  DATE ISSUED
+00045 *                                                      (0MMDDYYYY)
+00046      05  C515-CTLNUM        PIC 9(5)      COMP-3.
+00047 *                                             50-52  CONTROL
+00048 *                                                      NUMBER
+00049      05  C515-ISSBY         PIC X(8).
+00050 *                                             53-60  CERTIFICATE
+00051 *                                                      ISSUED BY
+00052      05  C515-OCCFAC        PIC 9(4)V9    COMP-3.
+00053 *                                             61-63  CERTIFIED
+00054 *                                                    HOMEOWNER
+00055 *                                                    OCCUP FCT
+00056      05  C515-PROFCTR       PIC 9V9(6)    COMP-3.
+00057 *                                             64-67  CERTIFIED
+00058 *                                                    HOMEOWNER
+00059 *                                                    PRORATE FCT
+00060      05  C515-EQVAL         PIC 9(9)      COMP-3.
+00061 *                                             68-72  CERTIFIED
+00062 *                                                    1977 BASE YR
+00063 *                                                    VALUE
+00064      05  C515-SEGCTR        PIC 999.
+00065 *                                             73-75  SEGMENT
+00066 *                                                    COUNTER
+00067      05  FILLER             PIC X(5).
+00068 *                                             76-80 AVAILABL
+00069      05  C515-COFEACTION.
+00070          10  C515-ACTNO     PIC 999.
+00071 *                                             81-83   ACTION NO.
+00072          10  C515-TYPE      PIC 99.
+00073 *                                             84-85  C OF E TYPE
+00074          10  C515-STAT      PIC 9.
+00075 *                                             86-86  C OF E STATUS
+00076          10  C515-REASON    PIC 99.
+00077 *                                             87-88  C OF E REASON
+00078          10  C515-PRTIND    PIC 9.
+00079 *                                             89-89  PRINT
+00080 *                                                     INDICATOR
+00081          10  C515-ADJIND    PIC 9.
+00082 *                                             90-90  ADJUDICATED
+00083 *                                                     INDICATOR
+00084          10  C515-TXCD      PIC 9(5)      COMP-3.
+00085 *                                             91-93  TAX CODE
+00086          10  C515-TXRTE     PIC 9(6)V9(3) COMP-3.
+00087 *                                             94-98  TAX RATE
+00088          10  C515-AMTDUE    PIC 9(11)V99  COMP-3.
+00089 *                                             99-105 AMOUNT DUE
+00090          10  C515-AMTPD     PIC 9(11)V99  COMP-3.
+00091 *                                            106-112 AMOUNT PAID
+00092          10  C515-APPLNAME  PIC X(22).
+00093 *                                            113-134 APPLICANT'S
+00094 *                                                     NAME
+00095          10  C515-APPLADDR  PIC X(22).
+00096 *                                            135-156 APPLICANT'S
+00097 *                                                     ADDRESS
+00098          10  C515-CITY      PIC X(12).
+00099 *                                            157-168 CITY
+00100          10  C515-ST        PIC XX.
+00101 *                                            169-170 STATE
+00102          10  C515-ZIP       PIC 9(9)      COMP-3.
+00103 *                                            171-175 ZIPCODE
+00104          10  C515-APPLPHONO PIC X(11).
+00105 *                                            176-186 APPLICANT'S
+00106 *                                                     PHONE NO.
+00107          10  C515-SECAPPLNM PIC X(22).
+00108 *                                            187-208 SECONDARY
+00109 *                                                     APPLICANT'S
+00110 *                                                     NAME
+00111          10  C515-ASSCERTVALS.
+00112              15  C515-CASSVAL   PIC 9(13)     COMP-3.
+00113 *                                            209-215 CERTIFIED
+00114 *                                                     ASSESSED
+00115 *                                                     VALUE
+00116              15  C515-CHOEXAMT  PIC 9(13)     COMP-3.
+00117 *                                            216-222 CERTIFIED
+00118 *                                                     HOMEOWNER
+00119 *                                                     EXEMPTION
+00120 *                                                     AMOUNT
+00121              15  C515-CHCOOPQTY PIC 9(5)      COMP-3.
+00122 *                                            223-225 CERTIFIED
+00123 *                                                     HOMESTEAD
+00124 *                                                     COOP QTY
+00125              15  C515-CHEXAMT   PIC 9(13)     COMP-3.
+00126 *                                            226-232 CERTIFIED
+00127 *                                                     HOMESTEAD
+00128 *                                                     EXEMPTION
+00129 *                                                     AMOUNT
+00130          10  C515-ASSRECVALS.
+00131              15  C515-RASSVAL   PIC 9(13)     COMP-3.
+00132 *                                            233-239 RECOMMENDED
+00133 *                                                     ASSESSED
+00134 *                                                     VALUE
+00135              15  C515-RORGEQVAL PIC 9(13)     COMP-3.
+00136 *                                            240-246 RECOMMENDED
+00137 *                                                     ORIGINAL
+00138 *                                                     EQUALIZED
+00139 *                                                     VALUE
+00140              15  C515-R77HOBSVAL PIC 9(13)    COMP-3.
+00141 *                                            247-253 RECOMMENDED
+00142 *                                                     1977
+00143 *                                                     HOMEOWNER
+00144 *                                                     BASE VALUE
+00145              15  C515-RHOPRO    PIC 9V9(6)    COMP-3.
+00146 *                                            254-257 RECOMMENDED
+00147 *                                                     HOMEOWNER
+00148 *                                                     PRORATION
+00149              15  C515-RHOOCCFAC PIC 9(4)V9    COMP-3.
+00150 *                                            258-260 RECOMMENDED
+00151 *                                                     HOMEOWNER
+00152 *                                                     OCCUPANCY
+00153 *                                                     FACTOR
+00154              15  C515-RHOCOOPQTY PIC 9(5)     COMP-3.
+00155 *                                            261-263 RECOMMENDED
+00156 *                                                     HOMEOWNER
+00157 *                                                     COOP QTY
+00158              15  C515-RHOEXAMT  PIC 9(13)     COMP-3.
+00159 *                                            264-270 RECOMMENDED
+00160 *                                                     HOMEOWNER
+00161 *                                                     EXEMPTION
+00162 *                                                     AMOUNT
+00163              15  C515-RHCOOPQTY PIC 9(5)      COMP-3.
+00164 *                                            271-273 RECOMMENDED
+00165 *                                                     HOMESTEAD
+00166 *                                                     COOP QTY
+00167              15  C515-RTXAMT    PIC 9(11)V99  COMP-3.
+00168 *                                            274-280 RECOMMENDED
+00169 *                                                     TAX AMOUNT
+00170          10  C515-ADJVALS.
+00171              15  C515-ANEWASSVAL PIC 9(13)    COMP-3.
+00172 *                                            281-287 ADJUDICATED
+00173 *                                                     NEW ASSESSED
+00174 *                                                     VALUE
+00175              15  C515-ANEWEQVAL PIC 9(13)     COMP-3.
+00176 *                                            288-294 ADJUDICATED
+00177 *                                                     NEW
+00178 *                                                     EQUALIZED
+00179 *                                                     VALUE
+00180              15  C515-AADJTXAMT PIC 9(11)V99  COMP-3.
+00181 *                                            295-301 ADJUDICATED
+00182 *                                                     ADJUSTED
+00183 *                                                     TAX AMOUNT
+00184          10  C515-TOBADTE       PIC 9(9)      COMP-3.
+00185 *                                            302-306 DATE TO B/A
+00186 *                                                     FROM ASSR
+00187 *                                                     (0MMDDYYYY)
+00188          10  C515-FRBADTE       PIC 9(9)      COMP-3.
+00189 *                                            307-311 DATE FROM
+00190 *                                                     B/A TO ASSR
+00191 *                                                     (0MMDDYYYY)
+00192          10  C515-TOSADTE       PIC 9(9)      COMP-3.
+00193 *                                            312-316 DATE TO S.A.
+00194 *                                                     FROM ASSR
+00195 *                                                     (0MMDDYYYY)
+00196          10  C515-FRSADTE       PIC 9(9)      COMP-3.
+00197 *                                            317-321 DATE FROM
+00198 *                                                     S.A. TO ASSR
+00199 *                                                     (0MMDDYYYY)
+00200          10  C515-TOTRSDTE      PIC 9(9)      COMP-3.
+00201 *                                            322-326 DATE TO
+00202 *                                                     TREASURER
+00203 *                                                     (0MMDDYYYY)
+00204          10  C515-ADJDTE        PIC 9(9)      COMP-3.
+00205 *                                            327-331 ADJUDICATION
+00206 *                                                     DATE
+00207 *                                                     (0MMDDYYYY)
+00208          10  C515-AMNDMTNO      PIC 999       COMP-3.
+00209 *                                            332-333 AMENDMENT
+00210 *                                                     NUMBER
+00211          10  C515-AMNDMTDTE     PIC 9(9)      COMP-3.
+00212 *                                            334-338 AMENDMENT
+00213 *                                                     DATE
+00214 *                                                     (0MMDDYYYY)
+00215          10  C515-UPDTDTE       PIC 9(9)      COMP-3.
+00216 *                                            339-343 UPDATE DATE
+00217 *                                                     (0MMDDYYYY)
+00218          10  C515-UPDTID        PIC X(8).
+00219 *                                            344-351 UPDATE I.D.
+00220          10  C515-RFNDDTE       PIC 9(9)      COMP-3.
+00221 *                                            352-356 REFUND DATE
+00222 *                                                     (0MMDDYYYY)
+00223          10  C515-ACCTNO        PIC 999       COMP-3.
+00224 *                                            357-358 ACCOUNT NO.
+00225          10  C515-DONO          PIC X(7).
+00226 *                                            359-365 D & O NO.
+00227          10  C515-EXVAL         PIC 9(13)     COMP-3.
+00228 *                                            366-372 EXCESS
+00229 *                                                     VALUATION
+00230          10  C515-JRCR          PIC 9(11)V99  COMP-3.
+00231 *                                            373-379 AMOUNT OF
+00232 *                                                     JR CREDIT
+00233          10  C515-RFND          PIC 9(11)V99  COMP-3.
+00234 *                                            380-386 REFUND
+00235 *                                                     AMOUNT
+00236          10  C515-INT-DATE      PIC 9(7)      COMP-3.
+00237 *                                            387-390 INTEREST
+00238 *                                                      DATE
+00239          10  C515-INT-PERC      PIC 99V9(3)   COMP-3.
+00240 *                                            391-393 INTEREST
+00241 *                                                     PERCENT
+00242          10  C515-SSN           PIC 9(9)      COMP-3.
+00243 *                                            394-398 SOCIAL
+00244 *                                                     SECURITY
+00245 *                                                     NUMBER
+00246          10  C515-WCNAME        PIC X(22).
+00247 *                                            399-420 WILL
+00248 *                                                     CALL
+00249 *                                                     NAME
+00250          10  C515-WCPHONE       PIC 9(11)     COMP-3.
+00251 *                                            421-426 WILL
+00252 *                                                     CALL
+00253 *                                                     PHONE
+00254 *                                                     NUMBER
+00255          10  C515-FEDID         PIC 9(9)      COMP-3.
+00256 *                                            427-431 FEDERAL
+00257 *                                                     I.D.
+00258 *                                                     NUMBER
+00259          10  C515-INT-AMT       PIC S9(9)V99  COMP-3.
+00260 *                                            432-437 INTEREST
+00261 *                                                    AMOUNT
+00262          10  C515-RSF-RESP      PIC X.
+00263 *                                            438-438 RECOMMENDED
+00264 *                                                    SF RESPONSE
+00265          10  C515-RSF-VALUE     PIC S9(9)     COMP-3.
+00266 *                                            439-443 RECOMMENDED
+00267 *                                                    SF VALUE
+00268          10  C515-ISSUE-DTE     PIC 9(9)      COMP-3.
+00269 *                                            444-448 ACTION
+00270 *                                                    ISSUE DATE
+00271 *                                                    (0MMDDYYYY)
+00272          10  C515-TRCK-DATE     PIC 9(9)      COMP-3.
+00273 *                                            449-453 TRACK DATE
+00274 *                                                    (0MMDDYYYY)
+00275          10  C515-TRCK-DISP     PIC 99.
+00276 *                                            454-455 TRACKING
+00277 *                                                    DISPOSITION
+00278          10  C515-CSF-RESP      PIC 9.
+00279 *                                            456-456 CERTIFIED
+00280 *                                                    SEN FREEZE
+00281 *                                                    RESPONSE
+00282          10  C515-CLANDVAL      PIC 9(9)      COMP-3.
+00283 *                                            457-461 CERTIFIED
+00284 *                                                    LAND
+00285 *                                                    VALUATION
+00286          10  C515-CBLDGVAL      PIC 9(9)      COMP-3.
+00287 *                                            462-466 CERTIFIED
+00288 *                                                    BUILDING
+00289 *                                                    VALUATION
+00290          10  C515-RLANDVAL      PIC 9(9)      COMP-3.
+00291 *                                            467-471 RECOMMENDED
+00292 *                                                    LAND
+00293 *                                                    VALUATION
+00294          10  C515-RBLDGVAL      PIC 9(9)      COMP-3.
+00295 *                                            472-476 RECOMMENDED
+00296 *                                                    BUILDING
+00297 *                                                    VALUATION
+00298          10  C515-CSF-VALUE     PIC 9(9)      COMP-3.
+00299 *                                            477-481 CERTIFIED
+00300 *                                                    SENIOR FREEZE
+00301 *                                                    VALUATION
+00302          10  C515-INT-DATE      PIC 9(9)      COMP-3.
+00303 *                                            482-486 INTEREST
+00304 *                                                    DATE
+00305          10  C515-CHK-DATE      PIC 9(9)      COMP-3.
+00306 *                                            487-491 CHECK
+00307 *                                                    DATE
+00308          10  C515-CHK-NO        PIC 9(7)      COMP-3.
+00309 *                                            492-495 CHECK
+00310 *                                                    NUMBER
+00311          10  C515-WCADDR        PIC X(22).
+00312 *                                            496-517 WILL CALL
+00313 *                                                    ADDRESS
+00314          10  FILLER REDEFINES C515-WCADDR.
+00315              15  C515-CHOBASE      PIC 9(9)        COMP-3.
+00316 *                                            496-500 CERT HOME
+00317 *                                                    ASSD VALUE
+00318              15  C515-TRS-TRKDTE   PIC 9(9)        COMP-3.
+00319 *                                            501-505 CERT HOME
+00320 *                                                    ASSD VALUE
+00321              15  C515-CDISEXM    PIC 9(5)     COMP-3.
+00322 *                                            506-508 CERTIFIED
+00323 *                                               DISABLED/EXEMPTION
+00324              15  C515-RDISEXM    PIC 9(5)     COMP-3.
+00325 *                                            509-511 RECOMMENDED
+00326 *                                               DISABLED/EXEMPTION
+00327              15  FILLER         PIC X(06).
+00328 *                                            512-517 FILLER
+00329          10  C515-WCCITY        PIC X(12).
+00330 *                                            518-529 WILL CALL
+00331 *                                                    CITY
+00332          10  FILLER REDEFINES C515-WCCITY.
+00333              15  C515-CHOPRO       PIC 9V9(6)       COMP-3.
+00334 *                                            518-521 CERTIFIED
+00335 *                                                    HOMEOWNER
+00336 *                                                    PRORATION
+00337              15  C515-CHOCOOPQTY   PIC 9(5)         COMP-3.
+00338 *                                            522-524 CERTIFIED
+00339 *                                                    HOMEOWNER
+00340 *                                                    COOP QTY
+00341              15  C515-CHOOCCFAC    PIC 9(4)V9       COMP-3.
+00342 *                                            525-527 CERTIFIED
+00343 *                                                    HOMEOWNER
+00344 *                                                    OCC FACTOR
+00345              15  FILLER            PIC XX.
+00346 *                                            528-529 FILLER
+00347          10  C515-WCST          PIC XX.
+00348 *                                            530-531 WILL CALL
+00349 *                                                    STATE
+00350          10  FILLER REDEFINES C515-WCST.
+00351              15  C515-CHO-RESP  PIC X.
+00352              15  C515-CHS-RESP  PIC X.
+00353 *
+00354          10  C515-WCZIP         PIC 9(9)      COMP-3.
+00355 *                                            532-536 WILL CALL
+00356 *                                                    ZIP CODE
+00357          10  C515-RFNDIND       PIC X.
+00358 *                                            537-537 REFUND
+00359 *                                                     INDICATOR
+00360          10  C515-HEXAMT        PIC 9(13)     COMP-3.
+00361 *                                            538-544 RECOMMENDED
+00362 *                                                     HOMESTEAD
+00363 *                                                     EXEMPTION
+00364 *                                                     AMOUNT
+00365          10  C515-RHORESP       PIC X.
+00366 *                                            545-545 HOMESTEAD
+00367 *                                                     RESPONSE
+00368          10  C515-RHSRESP       PIC X.
+00369 *                                            546-546 HOMEOWNER
+00370 *                                                     RESPONSE
+00371          10  C515-CEQVAL        PIC 9(13)     COMP-3.
+00372 *                                            547-553 CERTIFIED
+00373 *                                                     EQUALIZED
+00374 *                                                     VALUATION
+00375          10  C515-JRNO          PIC X(6).
+00376 *                                            554-559 JR NUMBER
+00377          10  C515-AMNDIND       PIC X.
+00378 *                                            560-560 AMENDMENT
+00379 *                                                    INDICATOR
+00380          10  C515-RLT-RESP      PIC X.
+00381 *                                            561-561 RECOMMENDED
+00382 *                                                    LT RESPONSE
+00383          10  C515-RLT-VALUE     PIC 9(9)      COMP-3.
+00384 *                                            562-566 RECOMMENDED
+00385 *                                                    LT VALUE
+00386          10  C515-CLT-RESP      PIC X.
+00387 *                                            567-567 CERTIFIED
+00388 *                                                    LT RESPONSE
+00389          10  C515-CLT-VALUE     PIC 9(9)      COMP-3.
+00390 *                                            568-572 CERTIFIED
+00391 *                                                    LT VALUE
+00392          10  FILLER             PIC X(38).
+00393 *                                            573-610 AVAILABLE
+00394 *----------------------------------------------------------------*

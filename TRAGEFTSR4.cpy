@@ -1,0 +1,58 @@
+00001 *              -----------------           *BYTES* *DESCRIPTION*
+00002      05  AGCY-EFTS-KEY.
+00003          07  AE-AGCYNO     PIC 9(9)     COMP-3.
+00004 *                                            1-5    AGENCY NUMBER
+00005      05  AE-DESC           PIC X(44).
+00006 *                                            6-49   AGENCY
+00007 *                                            DESCRIPTION
+00008      05  AE-NAME           PIC X(30).
+00009 *                                           50-79   NAME
+00010      05  AE-ADDR           PIC X(30).
+00011 *                                           80-109  ADDRESS
+00012      05  AE-CTY-ST         PIC X(20).
+00013 *                                           110-129 CITY-STATE
+00014      05  AE-ZIP            PIC 9(9)     COMP-3.
+00015 *                                           130-134 ZIP CODE
+00016      05  AE-TRANSNO        PIC X(9).
+00017 *                                           135-143 TRANSIT/ABA
+00018      05  FILLER            PIC X(06).
+00019 *                                           144-149
+00020 *                                                   SPACES.
+00021      05  AE-ACCTNO         PIC X(17).
+00022 *                                           150-166 ACCOUNT NO.
+00023 *                                        *  BANK INFORMATION  *
+00024      05  FILLER            PIC X(06).
+00025 *                                           167-172
+00026      05  AE-BK-NAME        PIC X(30).
+00027 *                                           173-202 BANK  NAME
+00028      05  AE-BK-CITY        PIC X(18).
+00029 *                                           203-220 BANK CITY
+00030      05  AE-BK-STATE       PIC XX.
+00031 *                                          221-222  BANK STATE
+00032      05  AE-BK-ZIP         PIC 9(9)     COMP-3.
+00033 *                                          223-227  BANK ZIP CODE
+00034 *                                                               *
+00035      05  AE-RATE           PIC 99V999   COMP-3.
+00036 *                                          228-230  AGENCY RATE
+00037      05  AE-DATE           PIC 9(7)     COMP-3.
+00038 *                                          231-234  DATE LAST
+00039 *                                                    UPDATE
+00040      05  AE-ACCT-TYP       PIC X(6).
+00041 *                                          235-240  BANK ACCOUNT
+00042 *                                                    TYPE
+00043      05  AE-AUTH-CD        PIC X.
+00044 *                                          241-241  AUTHORIZATION
+00045 *                                                    CODE
+00046      05  AE-TEL-NO         PIC 9(11)    COMP-3.
+00047 *                                          242-247  TELEPHONE NO.
+00048      05  AE-FAX-NO         PIC 9(11)    COMP-3.
+00049 *                                          248-253  FAX NO.
+00050      05  AE-HELP-OPT       PIC X.
+00051 *                                          254-254  HELP OPT OUT
+00052 *                                                   CODE 'X'
+00053      05  AE-HIST-OPT       PIC X.
+00054 *                                          255-255  HISTORIC OPT
+00055 *                                                   OUT CODE 'X'
+00056      05  FILLER            PIC X(1).
+00057 *                                          256-256  FILLER
+00058 * --------------------------------------------------------------*

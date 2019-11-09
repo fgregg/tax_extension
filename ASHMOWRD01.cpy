@@ -1,0 +1,86 @@
+00001 *  --  H O M E O W N E R   E X E M P T I O N   F I L E  --
+00002 *                                          *BYTES* *DESCRIPTION*
+00003 *                                            1-130  HOMEOWNER-REC.
+00004      05  HE-KEY.
+00005 *                                            1-10   RECORD KEY
+00006          10  HE-VOL    PIC 9(3)     COMP-3.
+00007 *                                             1-2     VOLUME
+00008          10  HE-PROP   PIC 9(15)    COMP-3.
+00009 *                                             3-10    PROPERTY-NO.
+00010      05  HE-TXCD       PIC 9(5)     COMP-3.
+00011 *                                           11-13   TAXCODE
+00012      05  HE-STAT1      PIC 9.
+00013          88  HE-STAT1-NOT-RENEWED   VALUE 0.
+00014          88  HE-STAT1-RENEWED       VALUE 1.
+00015          88  HE-STAT1-NO            VALUE 2.
+00016          88  HE-STAT1-INCOMPLETE    VALUE 3.
+00017          88  HE-STAT1-UNDELVRBLE    VALUE 4.
+00018 *                                           14      STATUS-1
+00019      05  HE-STAT2      PIC 9.
+00020          88  HE-STAT2-NOT-RENEWED   VALUE 0.
+00021          88  HE-STAT2-RENEWED       VALUE 1.
+00022 *                                           15      STATUS-2
+00023      05  HE-CLERKS-CLS PIC 9.
+00024 *                                           16      CLERK'S
+00025 *                                                    CLASS
+00026      05  HE-CLASS      PIC 9(3)     COMP-3.
+00027 *                                           17-18   CLASS
+00028 *                                                    MAJOR-MINOR
+00029      05  HE-YRAPPL     PIC 99.
+00030 *                                           19-20   YEAR APPLIED
+00031      05  HE-IND        PIC 9.
+00032 *                                           21-21   ELIGIBILITY
+00033 *                                                    INDICATOR
+00034      05  FILLER        PIC X.
+00035 *                                           22-22   FILLER
+00036      05  HE-PRORATE    PIC 9V9(6)   COMP-3.
+00037 *                                           23-26   PRO-RATION
+00038 *                                                    FACTOR
+00039      05  HE-COOPQTY    PIC 9(5)     COMP-3.
+00040 *                                           27-29   COOP-QUANTITY
+00041      05  HE-OCCFAC     PIC 9999V9   COMP-3.
+00042 *                                           30-32   OCCUPANCY FACT
+00043      05  HE-SPLIT-CD   PIC 9.
+00044 *                                           33-33   SPLIT CODE
+00045      05  HE-EQFCTR     PIC 9V9(4)   COMP-3.
+00046 *                                           34-36   EQUALIZED
+00047 *                                                    FACTOR
+00048      05  HE-H-V        PIC 9.
+00049          88  HE-NOT-EXEMPT          VALUE 0.
+00050          88  HE-HOMESTEAD-EXEMPT    VALUE 3.
+00051          88  HE-VETERANS-EXEMPT     VALUE 4.
+00052          88  HE-COOP-HOMESTD-EXEMPT VALUE 5.
+00053 *                                           37      HOMESTEAD OR
+00054 *                                                    VETERANS
+00055 *                                                    EXEMPTION
+00056      05  HE-ASSDVAL    PIC 9(9)     COMP-3.
+00057 *                                           38-42   ASSESSED
+00058 *                                                    VALUATION
+00059      05  HE-EQVAL      PIC 9(9)     COMP-3.
+00060 *                                           43-47   EQUALIZED
+00061 *                                                    VALUATION
+00062      05  HE-KEYPCL     PIC 9(15)    COMP-3.
+00063 *                                           48-55   KEYPARCEL NO.
+00064      05  FILLER        PIC XX.
+00065 *                                           56-57   FILLER
+00066      05  HE-NAME       PIC X(22).
+00067 *                                           58-79   NAME
+00068      05  HE-ADDR       PIC X(22).
+00069 *                                           80-101  ADDRESS
+00070      05  HE-CITY       PIC X(12).
+00071 *                                          102-113  CITY
+00072      05  HE-STATE      PIC XX.
+00073 *                                          114-115  STATE
+00074      05  HE-ZIP        PIC 9(9)     COMP-3.
+00075 *                                          116-120  ZIPCODE
+00076      05  HE-C-OF-E     PIC 9(5)     COMP-3.
+00077 *                                          121-123  C OF E NO.
+00078      05  HE-STAT3      PIC 9.
+00079 *                                          124      STATUS-3
+00080      05  FILLER        PIC X(4).
+00081 *                                          125-128  FILLER
+00082      05  HE-RECCD      PIC 9.
+00083 *                                          129      RECORD CODE
+00084      05  HE-TXTYP      PIC 9.
+00085 *                                          130      TAX TYPE
+00086 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

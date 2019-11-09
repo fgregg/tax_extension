@@ -1,0 +1,30 @@
+00001 *----------------------------------------------------------------*
+00002      05  VALIDATE-DATE.
+00003          10  VAL-CENT     PIC 99.
+00004              88  VAL-NEXT-CENT      VALUE 20.
+00005              88  VAL-CURR-CENT      VALUE 19.
+00006              88  VAL-PREV-CENT      VALUE 18.
+00007
+00008          10  VAL-YR       PIC 99.
+00009              88  VAL-NEXT-YRS       VALUE 00 THRU 50.
+00010              88  VAL-CURR-YRS       VALUE 51 THRU 99.
+00011              88  VAL-LEAP-YRS       VALUE 00 04 08 12 16 20 24 28
+00012                                           32 36 40 44 48 52 56 60
+00013                                           64 68 72 76 80 84 88 92
+00014                                           96.
+00015
+00016          10  VAL-MTH      PIC 99.
+00017              88  VAL-ALL-MTHS       VALUE 01 THRU 12.
+00018              88  VAL-FEB            VALUE 02.
+00019              88  VAL-4-MTHS         VALUE 04 06 09 11.
+00020              88  VAL-OTHER-MTHS     VALUE 01 03 05 07 08 10 12.
+00021
+00022          10  VAL-DAY      PIC 99.
+00023              88  VAL-ALL-DAYS       VALUE 01 THRU 28.
+00024              88  VAL-LEAP-DAYS      VALUE 29.
+00025              88  VAL-4-DAYS         VALUE 29 30.
+00026              88  VAL-OTHER-DAYS     VALUE 29 30 31.
+00027
+00028      05  VALIDATE-DATE-N  REDEFINES  VALIDATE-DATE
+00029                           PIC 9(8).
+00030 *----------------------------------------------------------------*

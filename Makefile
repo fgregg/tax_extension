@@ -17,10 +17,15 @@ CLREB020.cbl CLRTM356.cbl CLRTM749.cbl CLRTM750.cbl CLRTM751.cbl	\
 CLRTM752.cbl CLRTM753.cbl CLRTM755.cbl CLRTM756.cbl CLRTM757.cbl	\
 CLRTM759.cbl
 
-ezt_files = ASHMA360.ezt ASHMA361.ezt ASHMA441.ezt ASHMA856.ezt		\
-ASREA004.ezt ASREA006.ezt ASREA016.ezt ASREA037.ezt ASREA828.ezt	\
-ASREA829.ezt ASREA876.ezt ASREA896.ezt ASREA897.ezt ASREA898.ezt	\
-ASREA899.ezt CLRTM748.ezt CLSRQ074.ezt
+ezt_files = easytrieve/ASHMA360.ezt easytrieve/ASHMA361.ezt	\
+easytrieve/ASHMA441.ezt easytrieve/ASHMA856.ezt			\
+easytrieve/ASREA004.ezt easytrieve/ASREA006.ezt			\
+easytrieve/ASREA016.ezt easytrieve/ASREA037.ezt			\
+easytrieve/ASREA828.ezt easytrieve/ASREA829.ezt			\
+easytrieve/ASREA876.ezt easytrieve/ASREA896.ezt			\
+easytrieve/ASREA897.ezt easytrieve/ASREA898.ezt			\
+easytrieve/ASREA899.ezt easytrieve/CLRTM748.ezt			\
+easytrieve/CLSRQ074.ezt
 
 all : $(cpy_files) $(cbl_files) $(ezt_files)
 

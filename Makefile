@@ -41,7 +41,7 @@ all : $(cpy_files) $(cbl_files) $(mac_files)
 	cat $< | colrm 1 1 | sed 's///g' > $@
 
 % : %.cbl
-	cobc -std=ibm -x $<
+	cobc -I include -std=ibm -x $<
 
 VSAMHMST : HMSTMSTR
 	ASHMA440

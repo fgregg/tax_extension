@@ -1,5 +1,5 @@
 raw_cpy = $(wildcard raw/COPYBOOK.*)
-cpy_files = $(patsubst raw/COPYBOOK.%,%.cpy,$(raw_cpy))
+cpy_files = $(patsubst raw/COPYBOOK.%,include/%.cpy,$(raw_cpy))
 
 cbl_files = ASCOE500.cbl ASCOE515.cbl ASHMA440.cbl ASHMA550.cbl		\
 ASHMA660.cbl ASHMA825.cbl ASHMA827.cbl ASHMA828.cbl ASHMA830.cbl	\
@@ -17,14 +17,14 @@ CLREB020.cbl CLRTM356.cbl CLRTM749.cbl CLRTM750.cbl CLRTM751.cbl	\
 CLRTM752.cbl CLRTM753.cbl CLRTM755.cbl CLRTM756.cbl CLRTM757.cbl	\
 CLRTM759.cbl
 
-mac_files = ASHMA360.mac ASHMA361.mac ASHMA441.mac ASHMA856.mac		\
-ASREA004.mac ASREA006.mac ASREA016.mac ASREA037.mac ASREA828.mac	\
-ASREA829.mac ASREA876.mac ASREA896.mac ASREA897.mac ASREA898.mac	\
-ASREA899.mac CLRTM748.mac CLSRQ074.mac
+ezt_files = ASHMA360.ezt ASHMA361.ezt ASHMA441.ezt ASHMA856.ezt		\
+ASREA004.ezt ASREA006.ezt ASREA016.ezt ASREA037.ezt ASREA828.ezt	\
+ASREA829.ezt ASREA876.ezt ASREA896.ezt ASREA897.ezt ASREA898.ezt	\
+ASREA899.ezt CLRTM748.ezt CLSRQ074.ezt
 
-all : $(cpy_files) $(cbl_files) $(mac_files)
+all : $(cpy_files) $(cbl_files) $(ezt_files)
 
-%.cpy : raw/COPYBOOK.%
+include/%.cpy : raw/COPYBOOK.%
 	cat $< | colrm 1 1 | \
             sed 's/++INCLUDE \(.*\)/COPY \1./g' | \
             sed 's///g' > $@
@@ -37,7 +37,8 @@ all : $(cpy_files) $(cbl_files) $(mac_files)
             sed 's/EXAMINE/INSPECT/g' | \
             sed 's///g' > $@
 
-%.mac : raw/PROGRAM.%
+# http://www.simotime.com/maccpy01.htm
+%.ezt : raw/PROGRAM.%
 	cat $< | colrm 1 1 | sed 's///g' > $@
 
 % : %.cbl

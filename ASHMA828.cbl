@@ -26,8 +26,8 @@
 00026                             ORGANIZATION IS INDEXED
 00027                             ACCESS MODE IS RANDOM
 00028                             RECORD KEY IS  DT-KEY
-00029                             FILE STATUS IS FILE-STATUS
-00030                                            FILE-STATUS-2.
+00029                             FILE STATUS IS FILE-STATUS.
+00030
 00031      SKIP1
 00032      SELECT UPDATE-FILE   ASSIGN TO UT-S-UPDATEF.
 00033      SELECT UPDATE-REPORT ASSIGN TO UT-S-UPDATER.

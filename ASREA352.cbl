@@ -69,11 +69,11 @@
 00069      88 ERR                                         VALUE 'Y'.
 00070      SKIP2
 00071  01  WORK-AREAS.
-00072      05 AS-PREVIOUS-KEY1           PIC X(18)         VALUE SPACES
+00072      05 AS-PREVIOUS-KEY1           PIC X(18)         VALUE SPACES.
 00073      05 AS-CURRENT-KEY1.
 00074         10 AS-CK1-VOL              PIC 9(3).
 00075         10 AS-CK1-PROP             PIC 9(15).
-00076      05 BA-PREVIOUS-KEY2           PIC X(18)         VALUE SPACES
+00076      05 BA-PREVIOUS-KEY2           PIC X(18)         VALUE SPACES.
 00077      05 BA-CURRENT-KEY2.
 00078         10 BA-CK2-VOL              PIC 9(3).
 00079         10 BA-CK2-PROP             PIC 9(15).

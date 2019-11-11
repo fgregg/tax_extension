@@ -43,8 +43,8 @@
 00043                               ORGANIZATION IS INDEXED
 00044                               ACCESS MODE IS RANDOM
 00045                               RECORD KEY IS LDMK-KEY
-00046                               FILE STATUS IS FILE-STATUS
-00047                                   FILE-STATUS2.
+00046                               FILE STATUS IS FILE-STATUS.
+00047
 00048      SKIP3
 00049  DATA DIVISION.
 00050  FILE SECTION.

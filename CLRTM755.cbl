@@ -40,8 +40,8 @@
 00040                                   ORGANIZATION IS INDEXED
 00041                                   ACCESS IS RANDOM
 00042                                   RECORD KEY IS FA-KEY
-00043                                   FILE STATUS IS FRZN-STATUS
-00044                                                  FRZN-STATUS-2.
+00043                                   FILE STATUS IS FRZN-STATUS.
+00044
 00045  DATA DIVISION.
 00046  FILE SECTION.
 00047  COPY PRINTFILE.

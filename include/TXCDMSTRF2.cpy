@@ -4,4 +4,4 @@
 00004      LABEL  RECORDS  ARE STANDARD                                    CL**1
 00005      DATA   RECORD   IS  TAXCD-MSTR-REC.                             CL**1
 00006  01  TAXCD-MSTR-REC.                                                 CL**1
-00007  COPY TXCDMSTRFL                                                CL**1 FOUND   LEVEL=005 DATE=08/16/04.
+00007  COPY TXCDMSTRFL.                                                 CL**1 FOUND   LEVEL=005 DATE=08/16/04.

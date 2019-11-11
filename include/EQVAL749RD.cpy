@@ -1,4 +1,4 @@
-*          DATA SET EQVAL749RD AT LEVEL 004 AS OF 06/21/06
+      *          DATA SET EQVAL749RD AT LEVEL 004 AS OF 06/21/06
 00010 *      --------------               BYTES     DESCRIPTION
 00020 *
 00030      03  EQU-AGENCY-NO         PIC 9(9).

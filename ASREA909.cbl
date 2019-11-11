@@ -24,7 +24,7 @@
 00024          ORGANIZATION IS INDEXED
 00025          ACCESS IS RANDOM
 00026          RECORD KEY IS FDP-KEY
-00027          FILE STATUS IS FRZVAL-FILE-STAT FRZVAL-FILE-STAT-2.
+00027          FILE STATUS IS FRZVAL-FILE-STAT.
 00028                          EJECT
 00029 ******************************************************************
 00030  DATA DIVISION.

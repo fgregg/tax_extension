@@ -37,15 +37,15 @@
 00037                              ACCESS IS RANDOM
 00038                              ORGANIZATION IS INDEXED
 00039                              RECORD KEY IS TM-CODE
-00040                              FILE STATUS IS TAX-CODE-STATUS
-00041                                             TAX-CODE-STATUS2.
+00040                              FILE STATUS IS TAX-CODE-STATUS.
+00041
 00042      SKIP1
 00043      SELECT FRZAGCY-FILE     ASSIGN TO DA-FROZFILE
 00044                              ACCESS IS RANDOM
 00045                              ORGANIZATION IS INDEXED
 00046                              RECORD KEY IS FA-KEY
-00047                              FILE STATUS IS FROZ-FILE-STATUS
-00048                                             FROZ-FILE-STATUS2.
+00047                              FILE STATUS IS FROZ-FILE-STATUS.
+00048
 00049      SKIP1
 00050      SELECT CLTIFDIF         ASSIGN TO UT-S-TIFDIFLE.
 00051      SKIP1

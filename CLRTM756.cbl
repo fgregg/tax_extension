@@ -35,8 +35,8 @@
 00035                             RECORD KEY IS AGCY-EQV-KEY
 00036                             ORGANIZATION IS INDEXED
 00037                             ACCESS IS RANDOM
-00038                             FILE STATUS IS FILE-STATUS,
-00039                                            FILE-STATUSA.
+00038                             FILE STATUS IS FILE-STATUS.
+00039
 00040      SELECT PRINT-FILE      ASSIGN TO UT-S-PRINTFLE.
 00041
 00042  DATA DIVISION.

@@ -23,7 +23,7 @@
 00023      LABEL RECORDS ARE STANDARD                                   ASREA856
 00024      DATA RECORD IS HO-REC.                                       ASREA856
 00025  01  HO-REC.                                                      ASREA856
-00026  COPY HOMEXERD01                                             ASREA856 FOUND   LEVEL=016 DATE=07/14/08.
+00026  COPY HOMEXERD01.                                                 ASREA856 FOUND   LEVEL=016 DATE=07/14/08.
 00027      SKIP2                                                        ASREA856
 00028  FD  TEMPOUT                                                      ASREA856
 00029      BLOCK CONTAINS 0 RECORDS                                     ASREA856
@@ -84,7 +84,7 @@
 00084          10  ACPT-TIME              PIC 9(4).                     ASREA856
 00085          10  FILLER                 PIC 9(4).                     ASREA856
 00086      05  WS-TIME                    PIC 99,99,99.                 ASREA856
-00087  COPY TWNINFOTBL                                             ASREA856 FOUND   LEVEL=010 DATE=10/03/19.
+00087  COPY TWNINFOTBL.                                                 ASREA856 FOUND   LEVEL=010 DATE=10/03/19.
 00088      EJECT                                                        ASREA856
 00089  LINKAGE SECTION.                                                 ASREA856
 00090  01  LINK-INFO.                                                   ASREA856

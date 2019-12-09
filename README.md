@@ -1,4 +1,4 @@
-# Code for calculation tax extensions in Cook County
+# Code for calculation tax rates in Cook County
 
 In Illinois, County Clerks are responsible for calculating the tax rates for taxing bodies. We have a system where 
 
